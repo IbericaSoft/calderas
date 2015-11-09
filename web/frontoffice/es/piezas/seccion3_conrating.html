@@ -1,0 +1,41 @@
+<!-- seccion 3 -->
+<div id="module180">
+	<div class="wrapper">
+    	<a class="grey">
+    		<div class="module180b_left" itemscope itemtype="http://data-vocabulary.org/review">
+    			<div class="rating">
+    				<!-- rating -->
+    				<span class="rating" itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+    					<span itemprop="average"><?=self::$shop->articulo_default[media_votos]?></span> de 
+    					<span itemprop="best">10</span>
+    					sobre un total de <span itemprop="votes"><?=self::$shop->articulo_default[votos]?></span> votos
+    				</span>
+    			</div>
+    			<div class="module180b_text">
+    				<span class="module180_text_head" itemprop="itemreviewed"><?=self::$shop->articulo_default[titulo]?><br /></span>
+    				<time itemprop="dtreviewed" datetime="{fecha}"></time>
+    				<img class="casos-left" itemprop="photo" src="/frontoffice/images/contenidos/<?=self::$shop->articulo_default[foto]?>"/>
+    				<span itemprop="description"><?=self::$shop->articulo_default[articulo]?><br /></span>    			
+    			</div>
+    		</div>
+    	</a>        
+        <a class="grey">
+        	<div class="module180b_right" itemscope itemtype="http://data-vocabulary.org/review">
+        		<div class="rating">
+        			<!-- rating -->
+    				<span class="rating" itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+    					<span itemprop="average"><?=self::$shop->noticia_default[media_votos]?></span> de 
+    					<span itemprop="best">10</span>
+    					sobre un total de <span itemprop="votes"><?=self::$shop->noticia_default[votos]?></span> votos
+    				</span>
+        		</div>
+        		<div class="module180b_text">
+        			<span class="module180_text_head" itemprop="itemreviewed"><?=self::$shop->noticia_default[titulo]?><br/></span>
+        			<img class="casos-right" itemprop="photo" src="/frontoffice/images/contenidos/<?=self::$shop->noticia_default[foto]?>"/>
+        			<?=self::$shop->noticia_default[noticia]?><br />
+        		</div>
+        	</div>
+        </a>
+    </div>
+</div>
+<!-- fin seccion 3 -->

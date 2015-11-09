@@ -1,0 +1,24 @@
+﻿<!-- seccion 1 -->
+<div id="module160">
+	<div class="wrapper">
+		<div itemscope itemtype="http://schema.org/Product" class="promo_text_block">
+			<h1 itemprop="name" class="blue promo_text">&ldquo;Servicio técnico Calderas <?=self::$shop->marca_default[marcamodelo]?> en {ubicacion}&rdquo;</h1>
+			<div class="rating-s grey" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+				<?
+					//efecto rating corazones
+					for ($i=0;$i<self::getData("media");$i++)
+						echo "<img src=\"/frontoffice/images/rating-heart.png\" width=\"10px\"/>";
+					$gris = 5-self::getData("media");
+					for ($i=0;$i<$gris;$i++)
+						echo "<img src=\"/frontoffice/images/rating-heart-gris.png\" width=\"10px\"/>";
+				?>
+				<span itemprop="ratingValue"><?=self::getData("media")?></span>
+				<span itemprop="reviewCount">&nbsp;(<?=self::getData("total_opiniones")?> opiniones de nuestros servicios, <?=self::getData("positivos")?> positivas)</span>
+			</div>
+		</div>
+        <div class="promo_text_block">
+        	<h2 class="promo_text"><?=self::$shop->ubicacion_default[maps]?></h2>
+        </div>
+	</div>
+</div>
+<!-- fin seccion 1 -->	

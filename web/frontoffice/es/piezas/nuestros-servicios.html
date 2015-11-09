@@ -1,0 +1,32 @@
+﻿<!-- Somos-diferentes-->
+<div id="slideshow_container">	
+	<div  id="module_full_text">
+		<div class="wrapper">					
+			
+		<?foreach(self::$shop->listadoServicios as $data){?>
+			<div itemscope itemtype="http://schema.org/Product" class="grey">
+			<h3 itemprop="name"><a href="/servicio/<?=$data[seo_url]?>/{ubicacion_url}.html" alt="<?=$data[seo_title]?>"><?=$data[seo_h1]?></a></h3>
+			<?=$data[seo_description]?><br/>			
+			</div>
+		<?}?>				
+		
+		<hr>
+		<br><span class="blue promo_text">Nuestros técnicos son expertos en la reparación de las siguientes marcas:</span><br>&nbsp;
+		<?foreach(self::$shop->listadoMarcas as $data){?>
+			<div itemscope itemtype="http://schema.org/Product" class="grey">
+			<h3 itemprop="name"><a href="/servicio-tecnico/<?=$data[marcamodelo]?>/{ubicacion_url}.html" alt="Asistencia 24h en <?=$data[marcamodelo]?>">&#9742;&nbsp;Servicio técnico de calderas <?=$data[marcamodelo]?></a></h3>
+			</div>
+		<?}?>
+		<div style="clear:both"></div>
+		
+		<hr>
+		<br><span class="blue promo_text">Damos servicio en todas estas poblaciones:</span><br>&nbsp;
+        		<div class="mini_text grey" style="float:left">
+        		<?foreach(self::$shop->listadoUbicaciones as $data){?>
+        			<?=$data[ubicacion]?>&nbsp;
+        		<?}?>
+        		</div>        	
+		</div>
+	</div>	
+</div>
+<!-- fin servicios-->

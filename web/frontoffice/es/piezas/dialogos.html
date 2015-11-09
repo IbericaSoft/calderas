@@ -1,0 +1,55 @@
+<div id="mellamais" class="form-popup">
+	<a href="#" class="close"><img src="/frontoffice/images/close_pop.png" class="btn_close" title="Cerrar" alt="Cerrar" /></a>
+	  <form method="post" class="form" action="/contactar.html">
+	        <fieldset class="textbox">
+	        <label class="textbox">
+	        <span>Teléfono o Email</span>
+	        	<input id="teloemail" name="teloemail" value="<?=$_REQUEST[teloemail]?>" type="text" autocomplete="on" placeholder="Teléfono o email"/>
+	        </label>
+	        <label class="textbox">
+	        <span>Sobre que asunto podemos ayudarle</span>
+	        <textarea id="asunto" name="asunto" placeholder="Haganos un mínimo resumen del tema"><?=$_REQUEST[asunto]?></textarea>
+	        </label>
+	        <label class="textbox">
+	        <img src="<?=self::$shop->captcha_image?>"/><input id="captcha" name="captcha" value="" type="text"/>
+	        </label>
+	        <button class="submit button" type="submit">Enviar</button>
+	        <p>
+	        	<a class="politica" href="#politica">Política de privacidad</a>
+	        </p>	               
+	        </fieldset>
+	  </form>
+</div>
+
+
+<div id="politica" class="form-popup" style="width:50% !important; height:50% !important; overflow:scroll !important;">
+	<a href="#" class="close"><img src="/frontoffice/images/close_pop.png" class="btn_close" title="Cerrar" alt="Cerrar" /></a>
+	        <form>
+	        <fieldset class="textbox">
+	         <h3>Política de Protección de Datos</h3>
+	        <span>
+	        	A efectos de lo previsto en la Ley Orgánica 15/1999, de 13 de diciembre de Protección de Datos de Carácter Personal, 
+	        	el Real Decreto 1720/2007, de 21 de diciembre, y demás legislación aplicable, <?=HOST?> informa a las personas que faciliten
+	        	sus datos de carácter personal sobre su Política de Protección de Datos de Carácter Personal.
+				Esta política es aplicable a la recogida de datos personales por parte de <?=HOST?> por cualquier método, bien sea por escrito, 
+				teléfono, recepción de tarjetas de negocio o comunicación de datos mediante la cumplimentación del formulario de consulta 
+				en la página web. <?=HOST?> entiende que cualquier cliente y/o tercero que entregue sus datos personales lo hace voluntaria y 
+				libremente y con su consentimiento expreso e inequívoco.
+				<br/>
+				*Ficheros y Derechos: Los datos personales recogidos por <?=HOST?>, por cualquier método, serán incorporados a un fichero electrónico
+				denominado "clientes". <?=HOST?> utilizará este fichero única y exclusivamente para comunicación comercial. <?=HOST?> le garantiza que
+				no cederá sus datos personales a terceros. Podrá ejercer su derecho de cancelación o modificación de sus datos por escrito a la siguiente
+				dirección postal: {direccion}
+	        </span>
+	         
+	        <h3>Aviso Legal</h3>
+	        <span>
+				<?=HOST?> facilita información de carácter general sin que esta se considere como asesoramiento legal, no responsabilizandose por daños y perjuicios ocasionados
+				por el uso que se haga de la información contenida su página web. Los logos, imágenes y marcas de cada servicio técnico expuestos 
+				en este sitio Web, son propiedad de sus titulares y están protegidos por las leyes del copyright. <?=HOST?> no es el servicio técnico oficial
+				de ninguna marca, es un servicio técnico multimarca formado por expertos autorizados en instalaciones calefacción y gas.
+				<?=HOST?> se reserva el derecho a responder a las consultas recibidas de acuerdo a su criterio profesional.        
+	        </span>	      
+	        </fieldset>
+	        </form>
+</div>

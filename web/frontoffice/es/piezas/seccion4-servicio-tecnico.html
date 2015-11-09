@@ -1,0 +1,43 @@
+<!-- seccion 4 -->
+<div id="module180" style="position:relative;top:850px;height:400px;">
+	<div class="wrapper">
+    	<?
+    		//importante... si estamos pintando la ubicacion principal, por ejemplo, Madrid, pintamos mas enlaces entre ubicaciones, es decir, pintamos los
+			//links de ubicaciones
+    		if ( stristr( self::$shop->ubicacion_default[ubicacion], self::$shop->ubicacion_web ) ) {
+		?>
+		<div class="mini_text" style="height:400px;overflow:hidden;overflow-y:auto;">
+        		<?
+        		$array_unico = array();
+        		foreach(self::$shop->listadoUbicaciones as $data){
+					if ( $data[tipo]=='municipios' )
+						$ubicacion = $data[ubicacion];
+					else
+						$ubicacion = $data[grupo];
+						
+        			if ( $ubicacion==self::$shop->ubicacion_default[grupo] ) continue;//ubicacion actual
+					if ( $data[combinable]=="NO" ) continue;
+					
+					if (in_array($ubicacion, $array_unico)) continue;
+					array_push($array_unico,$ubicacion);
+        		?>
+        			<div itemprop="brand" itemscope itemtype="http://schema.org/Organization" style="float:left;">
+        				<span itemprop="name">        					        				
+        					<a class="grey" href="/servicio-tecnico/{marca}/<?=seo_friendly_url($ubicacion)?>.html">
+        					servicio técnico calderas <?=$ubicacion?>,
+        					</a>
+        				</span>
+    				</div>
+        		<?}?>
+        </div>
+        <? } else { ?>
+        	<div class="" style="height:400px;overflow:hidden;overflow-y:auto;">
+        		<div itemscope itemtype="http://schema.org/Product" class="blue">        		
+        			<span itemprop="name"><strong>Servicio técnico de calderas <?=self::$shop->marca_default[marcamodelo]?> en {ubicacion}</strong></span><br/><br/>
+	        		<span itemprop="description"><?=str_replace("\n","<br>",self::$shop->marca_default[seo_comercial])?></span><br/>        		
+				</div>
+			</div>
+        <? } ?>
+    </div>
+</div>
+<!-- fin seccion a -->

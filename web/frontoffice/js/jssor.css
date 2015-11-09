@@ -1,0 +1,86 @@
+/*** INICIO HOTSPOT **/
+.spot {cursor:pointer;/* background:transparent url(../images/spot.png) no-repeat; */} /** punto grafico del hotspot */
+/** capa contenedora de la informacion del hotspot */
+.info-spot { visibility:hidden; position:absolute; top:10px; left:10px; width:450px; background:#FFF; border: 1px solid #008fd0; overflow:hidden; }
+.info-spot div:first-child{ width:185px; height:170px; background:url("../images/bg.png") repeat 0 0 #F9F9F9; float:left; padding:6px; }
+.info-spot div:last-child{ width:250px; float:left;}
+.info-spot IMG {max-width:200px;max-height:165px;padding:0px;margin:0px;} /**imagen del hotspot */
+.info-spot strong{font-size:12px;}
+#slideshow_static  img {
+	margin-top: 0px;
+	border: none;
+}
+/*** FIN HOTSPOT **/
+
+/** Arrow Navigator Skin Begin */
+.jssora07l, .jssora07r, .jssora07ldn, .jssora07rdn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../images/inicio/a02.png) no-repeat;
+    overflow: hidden;
+}
+
+.jssora07l {
+    background-position: -5px -35px;
+}
+
+.jssora07r {
+    background-position: -65px -35px;
+}
+
+.jssora07l:hover {
+    background-position: -125px -35px;
+}
+
+.jssora07r:hover {
+    background-position: -185px -35px;
+}
+
+.jssora07ldn {
+    background-position: -245px -35px;
+}
+
+.jssora07rdn {
+    background-position: -305px -35px;
+}            
+/** Thumbnail Item Skin Begin */
+.jssort04 .w, .jssort04 .pav:hover .w {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border: #0099FF 1px solid;
+}
+
+* html .jssort04 .w {
+    width: /**/ 62px;
+    height: /**/ 32px;
+}
+
+.jssort04 .pdn .w, .jssort04 .pav .w {
+    border-style: solid;
+}
+
+.jssort04 .c {
+    width: 62px;
+    height: 32px;
+    filter: alpha(opacity=45);
+    opacity: .45;
+    transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -webkit-transition: opacity .6s;
+    -o-transition: opacity .6s;
+}
+
+.jssort04 .p:hover .c, .jssort04 .pav .c {
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.jssort04 .p:hover .c {
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+

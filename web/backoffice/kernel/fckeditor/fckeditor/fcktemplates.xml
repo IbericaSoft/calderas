@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2010 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This is the sample templates definitions file. It makes the "templates"
+ * command completely customizable.
+ *
+ * See FCKConfig.TemplatesXmlPath in the configuration file.
+-->
+<Templates imagesBasePath="fck_template/images/">
+	
+	<Template title="Imagen y titulo" image="template1.gif">
+		<Description>Una imagen alineada a la izquierda con titulo y texto.</Description>
+		<Html>
+			<![CDATA[
+				<img style="MARGIN: 5px 5px" height="100" alt="" width="100" align="left"/>
+				<h3>Titular aqui</h3>
+				Escribe aqui tu texto...
+			]]>
+		</Html>
+	</Template>
+	
+	<Template title="Imagen y titulo" image="template4.gif">
+		<Description>Una imagen alineada a la derecha con titulo y texto.</Description>
+		<Html>
+			<![CDATA[
+				<img style="MARGIN: 5px 5px" height="100" alt="" width="100" align="right"/>
+				<h3>Titular aqui</h3>
+				Escribe aqui tu texto...
+			]]>
+		</Html>
+	</Template>
+	
+	<Template title="Imagen destacada" image="template5.gif">
+		<Description>Una imagen superior destacada y debajo el texto</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="0" width="100%" border="0">
+					<tbody>
+						<tr>
+							<td width="100%"><h3>Titular aqui</h3></td>
+						</tr>
+						<tr>	
+							<td width="100%"><center><img style="MARGIN: 5px 5px" alt="" width="100%" align="middle"/></center></td>
+						</tr>
+						<tr>
+							<td width="100%">Escribe aqui tu texto...</td>
+						</tr>
+					</tbody>
+				</table>
+				Aqui mas texto...
+			]]>
+		</Html>
+	</Template>
+	
+</Templates>

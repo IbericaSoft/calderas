@@ -1,0 +1,20 @@
+<!-- slides-->
+<div id="slideshow_container">		
+	<div id="slideshow">
+     <div class="slides">
+     	<?
+     		//recuerda como viene la informacion: foto.jpg;titulo-texto#foto2.jpg;titulo2-texto2# ...
+     		$data = explode("#",self::$shop->servicio_default[fotosytexto]);
+			foreach($data as $data){
+				list($foto,$texto)=explode(";",$data);
+				list($titulo,$texto)=explode("-",$texto);
+				//por seguridad, por no pintar algo vacio
+				if ( !$titulo ) continue;
+		?>
+		<img src="/frontoffice/images/<?=$foto?>" data-label="<?=$titulo?> en {ubicacion}" data-text="<?=$texto?>" alt="<?=$texto?>"/>
+        <?}?>
+        <div class="description"></div>
+     </div>   
+	</div>
+</div>
+<!-- fin slides-->

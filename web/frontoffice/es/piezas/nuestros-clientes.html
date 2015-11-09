@@ -1,0 +1,24 @@
+<!-- nuestros-clientes-->
+<div id="slideshow_container">		
+	<div  id="module_full_text">
+		<div class="wrapper">
+			<h3>Esto es lo que dicen nuestros clientes de nosotros</h3>
+			<h2><a href="https://plus.google.com/u/0/+Sat-reparacioncalderasmadrid/about">&hearts;Opina sobre nosotros</a></h2>
+			<br/>
+			<?foreach(self::$shop->listadoOpiniones as $data){?>
+			<h4><?=$data[cliente]?></h4>
+			<!-- rating -->
+			<span class="rating" itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+				Puntuación: <span itemprop="average"><?=$data[valoracion]?></span> sobre 
+				<span itemprop="best">5</span>
+				- Repetiría: <span itemprop="votes"><?=$data[repetiria]?></span>
+			</span>
+			<div class="grey"><?=$data[opinion]?></div>
+			<br/>
+			<?}?>
+			
+			<br>	
+		</div>
+	</div>
+</div>
+<!-- fin nuestros-clientes-->
